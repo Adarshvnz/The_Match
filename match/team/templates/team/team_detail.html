@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h3>{{team.team_name}}</h3>
+    <h4>Created by : {{team.userid}}</h4>
+    <ul>
+      <li><h5>Team motto : {{team.team_motto}}</h5></li>
+      <li><h5>Contact No : {{team.contact_no}}</h5></li>
+      <li><h5>Location : {{team.location}}</h5></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

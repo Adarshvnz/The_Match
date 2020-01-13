@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h4>Schedule of Upcoming Matches are shown.</h4><br>
+    {% for matchset in object_list %}
+    <ul>
+      <li>{{matchset.team1}} VS {{matchset.team2}}.<br>
+      Match Date : {{matchset.match_date}}<br>
+      Venue : {{matchset.match_location}}</li>
+    </ul>
+
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}

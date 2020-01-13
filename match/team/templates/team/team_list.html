@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    
+    <h4>The Football Teams that are oficially registered
+      on this website are shown below.</h4><br>
+
+    {% for team in object_list %}
+    <ul>
+      <li><a href="{% url 'team:teamdetail' slug=team.slug %}">
+          <h4>{{team.team_name}}</h4>
+        </a>
+      </li>
+    </ul>
+
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}

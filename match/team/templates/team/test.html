@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h2>{{user.username}} is logged in!</h2><br>
+
+    <h3><a href="{% url 'team:all' %}">Go to Teams ></a></h3><br>
+    {% for team in object_list %}
+      <h1>team.userid</h1>
+      {% endfor %}
+
+        <a href="{% url 'team:createteam' %}" class="btn btn-warning" >+Create Team</a>
+
+
+
+  </div>
+
+</div>
+
+{% endblock %}
